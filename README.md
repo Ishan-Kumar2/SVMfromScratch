@@ -27,6 +27,8 @@ Approach
         if not yi(xi.w+b)>=1 for all points then break
         Else find |w| and put it in dictionary as key and (w,b) as values
         
-        If w<=0 then decrease step size, no need to check for negative as                     transformation already cover that
+        If w<=0 then decrease step size, no need to check for negative as transformation already cover that
+        
+        On comparing the time taken it is found that time taken by SKlearn's SVM is much less than the one created from scratch
     
 
