@@ -128,3 +128,19 @@ svm.fit(data=data_dict)
 svm.visualize(data=data_dict)
 endtime=time.time()
 print("SVM Made from Scratch"+str(endtime-startime))
+
+
+
+#Comparison with SKlearn
+X=np.row_stack((c1, c2))
+print(X)
+k=np.ones((50,1))*-1
+y=np.row_stack((np.ones((50, 1)),k))
+
+
+startt=time.time()
+from sklearn.svm import SVC
+Classifier=SVC(kernel='linear') 
+Classifier.fit(X,y.ravel())
+endd=time.time()
+print("SKLEARNS SVM"+str(1000*(endd-startt)))
